@@ -10,9 +10,10 @@ pipeline {
     	stage('DevOps') {
 				steps {
 					sh '''
+            docker info
+            docker version
             docker compose version
 						java --version
-					  docker info
 					'''
 				}
     	}
