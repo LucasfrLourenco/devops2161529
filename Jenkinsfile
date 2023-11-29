@@ -2,10 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('DevOps') {
-            steps {
-                echo 'Iniciando Pipiline'
-            }
+      stage('Iniciando'){
+        steps {
+          echo 'Iniciando Pipeline'
         }
+      },
+    	stage('DevOps') {
+				steps {
+					sh '''
+            docker info
+            docker version
+						docker compose version
+						java --version
+					'''
+				}
+    	}
     }
 }
