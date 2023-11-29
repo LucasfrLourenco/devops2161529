@@ -6,7 +6,7 @@ pipeline {
         steps {
           echo 'Iniciando Pipeline'
         }
-      },
+      }
     	stage('DevOps') {
 				steps {
 					sh '''
