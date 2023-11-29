@@ -11,6 +11,8 @@ pipeline {
 				steps {
 					sh '''
 						java --version
+            docker-compose build
+            docker-compose up
 					'''
 				}
     	}
